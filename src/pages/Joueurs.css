@@ -1,0 +1,86 @@
+.joueurs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.joueurs-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.joueurs-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ffc107;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.joueurs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.joueur-card {
+  background-color: #f2f8ff;
+  border-left: 6px solid #ffc107;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.joueur-card:hover {
+  transform: translateY(-4px);
+}
+
+.joueur-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.joueur-info {
+  flex: 1;
+}
+
+.joueur-info h3 {
+  margin: 0 0 0.5rem;
+  color: #004080;
+}
+
+.joueur-info p {
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+.joueur-date {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (min-width: 700px) {
+  .joueurs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .joueurs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
