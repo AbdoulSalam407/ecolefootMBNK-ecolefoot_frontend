@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f0f5ff; /* bleu clair doux */
+  border-radius: 12px;
 }
 
 .accueil-header {
@@ -21,6 +23,7 @@
   color: #333;
 }
 
+/* Titre de la section actualités */
 .actualites-section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -34,7 +37,7 @@
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #ffc107;
+  background-color: #ffc107; /* jaune vif */
   margin: 0.5rem auto 0;
   border-radius: 2px;
 }
@@ -46,12 +49,13 @@
 }
 
 .actu-card {
-  background-color: #f9fbff;
-  border-left: 6px solid #ffc107; /* jaune vif */
+  background-color: #ffffff;
+  border-left: 6px solid #ffc107;
   padding: 1.2rem 1.5rem;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.07);
   transition: transform 0.2s ease;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .actu-card:hover {
@@ -77,15 +81,56 @@
   font-style: italic;
 }
 
-/* Responsive */
+/* Animation douce */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tablette */
 @media (min-width: 600px) {
   .actus-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Responsive desktop */
 @media (min-width: 900px) {
   .actus-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 599px) {
+  .accueil-container {
+    padding: 1rem;
+    padding-top: 4rem; /* évite chevauchement avec navbar mobile */
+  }
+
+  .accueil-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .accueil-header p {
+    font-size: 1rem;
+  }
+
+  .actu-card {
+    padding: 1rem;
+  }
+
+  .actu-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .actu-card p {
+    font-size: 0.95rem;
   }
 }

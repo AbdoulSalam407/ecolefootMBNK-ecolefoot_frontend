@@ -7,6 +7,7 @@
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 .admin-title {
@@ -17,7 +18,9 @@
 
 .admin-description {
   font-size: 1.1rem;
+  color: #333;
   margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 .admin-button {
@@ -29,9 +32,32 @@
   font-weight: bold;
   font-size: 1rem;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .admin-button:hover {
   background-color: #ffdd57;
+  transform: scale(1.05);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+  .admin-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .admin-title {
+    font-size: 1.6rem;
+  }
+
+  .admin-description {
+    font-size: 1rem;
+  }
+
+  .admin-button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
 }
